@@ -33,7 +33,8 @@ const  SamplePrevArrow = (props) => {
 
 
 
-const ProductContainer = () => {
+const ProductContainer = ({data, headding}) => {
+  
     let settings = {
         infinite: false,
         speed: 500,
@@ -71,23 +72,11 @@ const ProductContainer = () => {
       };
     return (
         <div className="w-[90%] mx-auto shadow-xl p-8 bg-white">
-            <Slider {...settings}>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          <ProductCard></ProductCard>
-          
-         
+          <h2 className="text-lg font-bold text-gray-700 mb-3">{headding}</h2>
+            <Slider {...settings}> 
+          {
+            data.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
+          }
         </Slider>
         </div>
     );
