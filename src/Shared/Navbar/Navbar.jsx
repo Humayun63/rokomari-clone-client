@@ -4,13 +4,10 @@ import cart from '../../../public/cart.png'
 import './Navbar.css'
 import {  } from 'react-icons/fa';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-import { useState } from 'react';
+
 
 const Navbar = () => {
-    const [tabIndex, setTabIndex] = useState(0);
-    const [nestedTabIndex, setNestedTabIndex] = useState(0);
+    
     return (
         <div className='container mx-auto'>
             <div className='flex justify-between items-center py-5 px-4 lg:px-20'>
@@ -42,68 +39,7 @@ const Navbar = () => {
                     <button className=' px-3 bg-sky-500 border-2 border-sky-500'><FontAwesomeIcon className='text-white' icon={faMagnifyingGlass} /></button>
                 </form>
             </div>
-            <div className='mt-3'>
-             <Tabs selectedTabClassName="activeTab" selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-    <TabList className="flex justify-center gap-5 border-b border-sky-400" >
-      <Tab>বই</Tab>
-      <Tab>ইলেক্ট্রনিক্স</Tab>
-      <Tab>মনিহারি পণ্য</Tab>
-      <Tab>কিডস জোন</Tab>
-      <Tab>গিফট ফাইন্ডার</Tab>
-      <Tab>প্রাতিষ্ঠানিক অর্ডার</Tab>
-      <Tab>অফার সমূহ</Tab>
-      <Tab>কুইজ</Tab>
-      <Tab>ব্লগ</Tab>
-    </TabList>
-    <TabPanel>
-    <Tabs selectedTabClassName="selectedTabs" className="mt-2" selectedIndex={nestedTabIndex} onSelect={(index) => setNestedTabIndex(index)}>
-      <TabList className="flex gap-8 justify-center border-0 nestedTabs">
-        <Tab>লেখক</Tab>
-        <Tab>বিষয়</Tab>
-        <Tab>প্রকাশনী</Tab>
-        <Tab>ই-বুক</Tab>
-        <Tab>Buy 1 Get 1 Offer</Tab>
-        <Tab>স্টকের প্রোডাক্ট সমূহ</Tab>
-        <Tab>লিডারবোর্ডের ২০০ বই</Tab>
-        <Tab>বইমেলা ২০২৩</Tab>
-      </TabList>
-      <TabPanel>Lekhok</TabPanel>
-      <TabPanel>Bisoy</TabPanel>
-    </Tabs>
-    </TabPanel>
-    <TabPanel>
-    <Tabs selectedTabClassName="selectedTabs" selectedIndex={nestedTabIndex} onSelect={(index) => setNestedTabIndex(index)} >
-      <TabList className="flex justify-center border-0 nestedTabs">
-        <Tab>Title 1</Tab>
-        <Tab>Title 2</Tab>
-      </TabList>
-      <TabPanel></TabPanel>
-      <TabPanel></TabPanel>
-    </Tabs>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-    <TabPanel>
-      <h2>Any content 2</h2>
-    </TabPanel>
-             </Tabs>
-            </div>
+            
         </div>
     );
 };
