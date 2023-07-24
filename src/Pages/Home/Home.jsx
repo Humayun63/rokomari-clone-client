@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import Book from "../Book/Book";
 const Home = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const [nestedTabIndex, setNestedTabIndex] = useState(0);
@@ -29,7 +30,7 @@ const Home = () => {
             selectedIndex={nestedTabIndex}
             onSelect={(index) => setNestedTabIndex(index)}
           >
-            <TabList className="flex gap-8 justify-center border-0 nestedTabs">
+            <TabList className="flex gap-8 justify-center border-0 nestedTabs border-b border-b-gray-300">
               <Tab>লেখক</Tab>
               <Tab>বিষয়</Tab>
               <Tab>প্রকাশনী</Tab>
@@ -39,8 +40,8 @@ const Home = () => {
               <Tab>লিডারবোর্ডের ২০০ বই</Tab>
               <Tab>বইমেলা ২০২৩</Tab>
             </TabList>
-            <TabPanel>Lekhok</TabPanel>
-            <TabPanel>Bisoy</TabPanel>
+            <TabPanel className="bg-[#f1f2f4]"><Book></Book></TabPanel>
+            <TabPanel></TabPanel>
           </Tabs>
         </TabPanel>
         <TabPanel>
