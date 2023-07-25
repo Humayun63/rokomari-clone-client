@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import Book from "../Book/Book";
+import './Home.css'
 const Home = () => {
   const [tabIndex, setTabIndex] = useState(0);
   const [nestedTabIndex, setNestedTabIndex] = useState(0);
@@ -12,7 +13,7 @@ const Home = () => {
         selectedIndex={tabIndex}
         onSelect={(index) => setTabIndex(index)}
       >
-        <TabList className="flex justify-center gap-5 border-b border-sky-400">
+        <TabList className="flex flex-col md:flex-row justify-center bg-white gap-5 border-b border-sky-400">
           <Tab>বই</Tab>
           <Tab>ইলেক্ট্রনিক্স</Tab>
           <Tab>মনিহারি পণ্য</Tab>
@@ -26,11 +27,10 @@ const Home = () => {
         <TabPanel>
           <Tabs
             selectedTabClassName="selectedTabs"
-            className="mt-2"
             selectedIndex={nestedTabIndex}
             onSelect={(index) => setNestedTabIndex(index)}
           >
-            <TabList className="flex gap-8 justify-center border-0 nestedTabs border-b border-b-gray-300">
+            <TabList className="flex flex-col pt-2 md:flex-row bg-white gap-8 justify-center border-0 nestedTabs border-b border-b-gray-300">
               <Tab>লেখক</Tab>
               <Tab>বিষয়</Tab>
               <Tab>প্রকাশনী</Tab>
@@ -40,7 +40,7 @@ const Home = () => {
               <Tab>লিডারবোর্ডের ২০০ বই</Tab>
               <Tab>বইমেলা ২০২৩</Tab>
             </TabList>
-            <TabPanel className="bg-[#f1f2f4]"><Book></Book></TabPanel>
+            <TabPanel className=" max-w-[1200px] mx-auto"><Book></Book></TabPanel>
             <TabPanel></TabPanel>
           </Tabs>
         </TabPanel>

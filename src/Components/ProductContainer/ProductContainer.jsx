@@ -25,7 +25,7 @@ const  SamplePrevArrow = (props) => {
       className={className}
       style={{ ...style, background: "#30bbfcce", padding: "10px", borderRadius: "2px", width: "40px", height: "80px", zIndex: "10", display: "flex", alignItems: "center", color: "black" }}
       onClick={onClick}
-    >H</div>
+    />
   );
 }
 
@@ -71,7 +71,7 @@ const ProductContainer = ({data, headding}) => {
         ]
       };
     return (
-        <div className="w-[90%] mx-auto shadow-xl p-8 my-10 bg-white">
+        <div className=" mx-auto p-5 my-10 bg-white">
           <h2 className="text-lg font-bold text-gray-700 mb-3">{headding}</h2>
             <Slider {...settings}> 
           {

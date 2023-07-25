@@ -11,15 +11,15 @@ const HomeSlider = () => {
         fade: true,
         infinite: true,
         autoplay: true,
-        speed: 1000,
+        speed: 700,
       autoplaySpeed: 3000,
-        slidesToShow: Infinity,
+        slidesToShow: 1,
         slidesToScroll: 1,
         cssEase: "linear"
       };
     return (
         <div className="py-5">
-            <Slider {...settings} className="w-[90%] h-[50%] mx-auto">
+            <Slider {...settings} className="h-[50%] mx-auto">
           <div>
             <img src={banner1} />
           </div>
