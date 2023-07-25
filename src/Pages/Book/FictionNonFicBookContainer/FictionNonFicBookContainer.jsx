@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import useFictionBooks from "../../../Hooks/useFictionBooks";
-import FicNonFicCard from "./FicNonFicCard";
-
+import FicNonFicCard from "../FicNonFicCard/FicNonFicCard";
+import useNonFictionBooks from "../../../Hooks/useNonFictionBooks";
 
 
 
@@ -35,15 +35,16 @@ const SampleNextArrow = (props) => {
 const FictionNonFicBookContainer = () => {
 
     const [fictionBooks, isFictionBooksLoading] = useFictionBooks();
+    const [nonFictionBooks, isNonFictionBooksLoading] = useNonFictionBooks();
     console.log(fictionBooks);
-    if(isFictionBooksLoading){
+    if(isFictionBooksLoading || isNonFictionBooksLoading){
         return <h1>Loading</h1>
     }
     let settings = {
         infinite: false,
         speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2.8,
+        slidesToScroll: 2.8,
         initialSlide: 0,
         nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
@@ -51,10 +52,8 @@ const FictionNonFicBookContainer = () => {
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
+              slidesToShow: 2.5,
+              slidesToScroll: 2.5
             }
           },
           {
@@ -75,10 +74,13 @@ const FictionNonFicBookContainer = () => {
         ]
       };
     return (
-        <div className="w-[90%] mx-auto shadow-xl">
+        <div className="mx-auto my-24">
           <h2 className="text-lg font-bold text-gray-700 mb-3">{""}</h2>
             <Slider {...settings}> 
                 <FicNonFicCard header={"ফিকশন বই"} books={fictionBooks}></FicNonFicCard>
+                <FicNonFicCard header={"নন ফিকশন বই"} books={nonFictionBooks}></FicNonFicCard>
+                <FicNonFicCard header={"ধর্মীয় বই"} books={fictionBooks}></FicNonFicCard>
+                <FicNonFicCard header={"ক্যারিয়ার ও একাডেমিক বই"} books={fictionBooks}></FicNonFicCard>
             </Slider>
         </div>
     );

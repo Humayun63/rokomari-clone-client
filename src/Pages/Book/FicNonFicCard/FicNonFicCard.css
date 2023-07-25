@@ -1,0 +1,6 @@
+.activetab{
+    background: linear-gradient(to bottom, #30bbfc38, #f7f7f7);
+    color: #30bbfc;
+    border-top: 2px solid #1aaef3;
+    overflow: hidden;
+}

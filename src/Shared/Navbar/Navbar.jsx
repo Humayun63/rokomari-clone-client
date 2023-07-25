@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
     
     return (
-        <div className='container mx-auto'>
+        <div className=' w-full mx-auto fixed top-0 z-50 h-[85px] bg-white'>
             <div className='flex justify-between items-center py-5 px-4 lg:px-20'>
                 <img className='w-32' src={rokomari_logo} alt="Logo of rokomari.com" />
                 <form className='md:flex rounded-md hidden max-w-xl'>
