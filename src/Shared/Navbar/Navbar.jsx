@@ -4,6 +4,7 @@ import cart from '../../../public/cart.png'
 import './Navbar.css'
 import {  } from 'react-icons/fa';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
@@ -25,7 +26,7 @@ const Navbar = () => {
                     <button>
                         <img className='w-9' src={cart} alt="" />
                     </button>
-                    <button className='px-4 py-2 border border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'>Sign In</button>
+                    <Link to="/login"><button className='px-4 py-2 border border-gray-400 rounded hover:bg-green-500 hover:text-white hover:border-green-500 transition-all'>Sign In</button></Link>
                 </div>
             </div>
             <div>
