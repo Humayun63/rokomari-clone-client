@@ -34,7 +34,7 @@ const  SamplePrevArrow = (props) => {
 
 
 const ProductContainer = ({data, headding}) => {
-  
+  console.log(data);
     let settings = {
         infinite: false,
         speed: 500,
@@ -71,7 +71,7 @@ const ProductContainer = ({data, headding}) => {
         ]
       };
     return (
-        <div className="w-[90%] mx-auto shadow-xl p-8 bg-white">
+        <div className="w-[90%] mx-auto shadow-xl p-8 my-10 bg-white">
           <h2 className="text-lg font-bold text-gray-700 mb-3">{headding}</h2>
             <Slider {...settings}> 
           {
