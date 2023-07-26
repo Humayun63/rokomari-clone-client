@@ -5,7 +5,7 @@ const ProductCard = ({product}) => {
     const {specification, images, price} = product;
     console.log(product);
     return (
-        <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='flex flex-col justify-between text-center hover-effect h-[330px] p-2 relative'>
+        <div onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} className='flex flex-col justify-between text-center hover-effect h-[340px] px-2 pt-5 relative'>
             <img className='h-[180px]' src={images[0]} alt="" />
             <div className=' p-2 space-y-2'>
             <h3 className='text-sm'>{specification.title}</h3>

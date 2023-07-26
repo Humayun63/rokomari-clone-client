@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <div className=' w-full mx-auto fixed top-0 z-50 h-[85px] bg-white'>
             <div className='flex justify-between items-center py-5 px-4 lg:px-20'>
-                <img className='w-32' src={rokomari_logo} alt="Logo of rokomari.com" />
+                <Link to="/"><img className='w-32' src={rokomari_logo} alt="Logo of rokomari.com" /></Link>
                 <form className='md:flex rounded-md hidden max-w-xl'>
                     <select className='p-2 border-l border-t rounded-l border-gray-200 border-b-2 border-b-orange-400 focus:border-b-1 focus:border-gray-200 focus:text-sky-500 focus:bg-sky-50 outline-none' name="" id="">
                         <option value="all">All</option>
