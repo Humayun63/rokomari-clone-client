@@ -11,7 +11,7 @@ const SampleNextArrow = (props) => {
   return (
     <div
       className={className}
-      style={{ ...style, background: "#30bbfcce", padding: "10px", borderRadius: "2px", width: "40px", height: "80px", zIndex: "10", display: "flex", alignItems: "center", color: "black" }}
+      style={{ ...style, background: "#1db7ff", padding: "10px", boxShadow: "-6px 0px 14px 1px #4fc7ffb9", borderRadius: "2px", width: "40px", height: "80px", zIndex: "10", display: "flex", alignItems: "center", color: "black" }}
       onClick={onClick}
     />
   );
@@ -23,7 +23,7 @@ const  SamplePrevArrow = (props) => {
   return (
     <div
       className={className}
-      style={{ ...style, background: "#30bbfcce", padding: "10px", borderRadius: "2px", width: "40px", height: "80px", zIndex: "10", display: "flex", alignItems: "center", color: "black" }}
+      style={{ ...style, background: "#1db7ff", padding: "10px", boxShadow: "6px 0px 14px 1px #4fc7ffb9", borderRadius: "2px", width: "40px", height: "80px", zIndex: "10", display: "flex", alignItems: "center", color: "black" }}
       onClick={onClick}
     />
   );
@@ -71,7 +71,7 @@ const ProductContainer = ({data, headding}) => {
         ]
       };
     return (
-        <div className=" mx-auto p-5 my-10 bg-white">
+        <div className=" mx-auto px-5 py-10  my-5 bg-white">
           <h2 className="text-lg font-bold text-gray-700 mb-3">{headding}</h2>
             <Slider {...settings}> 
           {
